@@ -117,6 +117,7 @@ export default Component.extend({
     if ($element) {
       let chart = $element.highcharts(...completeChartOptions).highcharts();
       set(this, 'chart', chart);
+      this.sendAction('chartDrawn', chart);
     }
   },
 
